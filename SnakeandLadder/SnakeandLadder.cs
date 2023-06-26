@@ -9,6 +9,7 @@ namespace SnakeandLadder
     public class SnakeandLadder
     {
         int position = 0;
+        int dicerollcount = 0;
         public void Checksnakeandladder()
         {
             Console.WriteLine("Start Position = " + position);
@@ -16,6 +17,7 @@ namespace SnakeandLadder
             while (position < 100)
             {
                 int num = random.Next(1, 7);
+                dicerollcount++;
                 Console.WriteLine("Player roll the dice and get the number = " + num);
                 int option = random.Next(0, 3);
                 if (option == 0)
@@ -45,9 +47,10 @@ namespace SnakeandLadder
                     position =position - num;
                     Console.WriteLine("Player overshoots 100 - Stays in the previous position");
                 }
-
+          
             }
             Console.WriteLine("Player reaches the winning position 100!");
+            Console.WriteLine("Number of times the dice was played to win the game: " + dicerollcount);
         }
     }
 }
