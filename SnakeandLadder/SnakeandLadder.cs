@@ -12,6 +12,9 @@ namespace SnakeandLadder
         public void Checksnakeandladder()
         {
             Console.WriteLine("Start Position = " + position);
+            Random random = new Random();   
+            int num = random.Next(1,7);
+            Console.WriteLine("Player roll the dice and get the number = " + num);
         }
     }
 }
