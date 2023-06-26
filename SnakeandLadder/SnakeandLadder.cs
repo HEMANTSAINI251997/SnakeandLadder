@@ -40,7 +40,12 @@ namespace SnakeandLadder
                     
                     
                 }
-               
+                if (position > 100)
+                {
+                    position =position - num;
+                    Console.WriteLine("Player overshoots 100 - Stays in the previous position");
+                }
+
             }
             Console.WriteLine("Player reaches the winning position 100!");
         }
